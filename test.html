@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<title>Our Bags</title>
+<style>
+body {
+background-color :white;
+text-align :center;
+    }
+h1 {
+    color: darkred;
+    }
+p {
+    color: white;
+    }
+.products {
+    display: grid;
+    grid-template-columns:
+repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: auto;
+          }
+.product {
+        border: 1px solid #ddd;
+        padding: 12px;
+        background-color: #fff;
+        border-radius: 10px;
+         }
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+             }
+.product h2 {
+        color: darkred ;
+        font-size: 24px ;
+        margin: 10px 0 5px;
+            }
+    .product p {
+        color:black;
+        font-size: 18px;
+        }
+.toast {
+position: fixed;
+top: 20px;
+right: 20px;
+background-color: darkred;
+color: white;
+padding: 12px 20px;
+border-radius: 8px;
+font-size: 18px;
+z-index: 1000;
+    }
+    
+</style>
+</head>
+<body>
+<h1>Our Bags</h1> 
+    
+<p1>Bags collection,Enjoy</p>
+
+<div class="products">
+
+        <div class="product">
+        <img src="image.bags/image1.png"
+            alt="bag">
+        <h2>classic Bag</h2>
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic Bag',500)">
+            Add to Cart
+            </button>
+        </div>
+    
+        <div class="product">
+        <img src="image.bags/image2.jpg"
+            alt="bag">
+        <h2>classic Bag</h2>
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic Bag',500)">
+               Add to Cart
+            </button>
+            
+        </div>
+
+        <div class="product">
+        <img src="image.bags/image3.jpg"
+            alt="bag">
+        <h2>classic Bag</h2>
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic Bag',500)">
+            Add to Cart
+        </button>
+        </div>
+
+        <div class="product">
+        <img src="image.bags/image4.jpg"
+                alt="bag">
+        <h2>classic Bag</h2>
+            
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic bag',500)">
+            Add to Cart
+        </button>
+        </div>
+
+        <div class="product">
+        <img src="image.bags/image5.jpg"
+                alt="bag">
+        <h2>classic Bag</h2>    
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic Bag',500)">
+            Add to Cart
+            </button>
+        </div>
+
+        <div class="product">
+        <img src="image.bags/image6.jpg"
+            alt="bag">
+        <h2>classic Bag</h2>
+        <p>500 EGP</p>
+        <button onclick="addToCart('classic Bag',500)">             
+            Add to Cart
+            </button>
+        </div> 
+    
+<h2>My Cart</h2>
+<div id="cart"></div>
+<h3 id="total">Total: 0 EGP</h3>
+    
+<script>
+let cart = [];
+
+function addToCart(name, price) {
+        cart.push({
+            name: name,
+            price: price
+                });
+displayCart();
+    
+   let message = document.creatElement("div");
+    
+ message.textContent = "Added!";
+alert("MESSAGE");
+ message.className = "toast";
+    
+ message.style.position =
+     
+"fixed";
+ message.style.top = "20px";
+ message.style.right = "20px";
+ message.style.backgroundColor =
+"darkred";
+ message.style.color = "white";
+ message.style.padding = "10px 20px";
+ message.style.borderRadius = "8px";
+ message.style.zIndex = "1000";
+
+document.body.appendChild(message);
+
+    setTimeout(function() {
+        message.remove();
+    }, 1500);
+}
+function displayCart() {
+    let cartDiv =
+        document.getElementById("cart");
+
+cartDiv.innerHTML = "";
+
+    let total = 0;
+
+    cart.forEach(function(product) {
+        cartDiv.innerHTML += "<p>"
+        + product.name + " - "
+        + product.price + "EGP</p>";
+
+        total += product.price;
+        });
+
+document.getElementById("total").innerText = "Total: " + total + " EGP";
+    }
+</script>
+</body>    
+</html>
