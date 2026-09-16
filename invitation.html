@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Invitation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="musicButton">Play Music</button>
+
+    <audio id="birthdayMusic">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="balloon balloon1"></div>
+    <div class="balloon balloon2"></div>
+    <div class="balloon balloon3"></div>
+
+    <div class="invitation">
+
+        <p class="small-title fade-in">YOU'RE INVITED</p>
+
+<h1 class="fade-in">Birthday Party 🎂</h1>
+
+<h2 class="fade-in">Lina's Birthday</h2>
+
+<p class="fade-in">
+    A special day, made more special with people I care about
+</p>
+
+        <div id="countdown">
+
+            <div>
+                <span id="days">00</span>
+                <small>Days</small>
+            </div>
+
+            <div>
+                <span id="hours">00</span>
+                <small>Hours</small>
+            </div>
+
+            <div>
+                <span id="minutes">00</span>
+                <small>Minutes</small>
+            </div>
+
+            <div>
+                <span id="seconds">00</span>
+                <small>Seconds</small>
+            </div>
+
+        </div>
+
+        <p class="message">
+            Come celebrate this special day with us!
+        </p>
+      <div class="party-photos">
+    <img src="images/birth1.jpg" alt="">
+    <img src="images/birth2.jpg" alt="">
+    <img src="images/birth3.jpg" alt="">
+</div>
+
+        <button id="detailsButton" class="details-button">
+    PARTY DETAILS
+</button>
+
+<div class="details" id="partyDetails" style="display: none;">
+    <p>📅 Saturday, May 26</p>
+    <p>⏰ 7:00 PM</p>
+    <p>📍 Lina's Home</p>
+</div>
+
+        <a
+            href="https://wa.me/201020245122?text=Hello!%20I%20would%20like%20to%20confirm%20my%20attendance."
+            class="rsvp-button"
+            target="_blank">
+            RSVP NOW
+        </a>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
